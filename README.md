@@ -1,1 +1,6 @@
 # urban-sound-classification
+Use TensorFlow 2 to train neural networks for the classification of sound events based on audio files from the UrbanSound8K dataset: it contains 8732 sound excerpts (<=4 seconds) of urban sounds labeled with 10 classes: air_conditioner, car_horn, children_playing, dog_bark, drilling, enginge_idling, gun_shot, jackhammer, siren, and street_music.
+Other features can be extracted with the librosa library (or even other libraries) including the Chromagram (with the librosa.feature.chroma_stft). Other less tailored features for the considered domain can be extracted, e.g. the Root Mean Square of the audio signal and its statistics (min, max, average, standard deviation, etc.). Feature selection methods may be applied to select most relevant features (for instance PCA. A wide list of methods is implemented in sklearn.feature_selection).
+
+
+The dataset is provided with 10 predefined folds. Train the model on folds: 1, 2, 3, 4, 6, and test it on folds: 5, 7, 8, 9, 10. Report the obtained average accuracy and standard deviation across the test folds. Experiment with different feature extraction methods, network architectures and training parameters documenting their influence of the final predictive performance.
